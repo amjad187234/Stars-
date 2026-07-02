@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUp, MapPin, Phone } from "lucide-react";
 import { navLinks, contactInfo, siteConfig } from "@/lib/constants";
@@ -13,9 +14,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-heading text-2xl">
-              Stars <span className="text-gold">Event Saal</span>
-            </p>
+            <Image
+              src="/images/logo.png"
+              alt="Stars Event Saal Logo"
+              width={592}
+              height={379}
+              className="h-16 w-auto"
+            />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Ihre stilvolle Eventlocation in Berlin für Hochzeiten,
               Verlobungen, Familienfeiern und Firmenevents.

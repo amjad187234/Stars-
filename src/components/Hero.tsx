@@ -13,7 +13,7 @@ export default function Hero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.3, 0.55]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.38, 0.6]);
 
   return (
     <section
@@ -36,7 +36,8 @@ export default function Hero() {
         style={{ opacity: overlayOpacity }}
         className="absolute inset-0 bg-black"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
       <div className="relative z-10 w-full px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
         <div className="max-w-2xl">

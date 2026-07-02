@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/constants";
 
@@ -27,13 +28,15 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <a
-          href="#startseite"
-          className={`font-heading text-xl tracking-wide transition-colors duration-500 lg:text-2xl ${
-            dark ? "text-foreground" : "text-white"
-          }`}
-        >
-          Stars <span className="text-gold">Event Saal</span>
+        <a href="#startseite" className="block">
+          <Image
+            src="/images/logo.png"
+            alt="Stars Event Saal Logo"
+            width={592}
+            height={379}
+            priority
+            className="h-11 w-auto lg:h-14"
+          />
         </a>
 
         <ul className="hidden items-center gap-9 lg:flex">

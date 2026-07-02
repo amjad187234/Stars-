@@ -14,12 +14,16 @@ export default function StatsGrid() {
       variants={staggerContainer(0.15)}
       className="grid grid-cols-2 gap-10 text-center lg:grid-cols-4"
     >
-      {stats.map((stat) => (
-        <motion.div key={stat.label} variants={fadeUp}>
+      {stats.map((stat, i) => (
+        <motion.div
+          key={stat.label}
+          variants={fadeUp}
+          className={`${i > 0 ? "lg:border-l lg:border-black/10" : ""}`}
+        >
           <p className="font-heading text-4xl text-gold sm:text-5xl">
             <Counter value={stat.value} suffix={stat.suffix} />
           </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.25em] text-white/70 sm:text-sm">
+          <p className="mt-3 text-xs uppercase tracking-[0.25em] text-muted sm:text-sm">
             {stat.label}
           </p>
         </motion.div>
