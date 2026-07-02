@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendContactEmail } from "@/lib/mailer";
 
 const requiredFields = [
   "vorname",
@@ -38,6 +39,29 @@ export async function POST(request: Request) {
         fields: missing,
       },
       { status: 400 }
+    );
+  }
+
+  try {
+    await sendContactEmail({
+      vorname: String(data.vorname),
+      nachname: String(data.nachname),
+      telefon: String(data.telefon),
+      email: String(data.email),
+      eventTyp: String(data.eventTyp),
+      datum: data.datum ? String(data.datum) : undefined,
+      gaesteanzahl: data.gaesteanzahl ? String(data.gaesteanzahl) : undefined,
+      nachricht: data.nachricht ? String(data.nachricht) : undefined,
+    });
+  } catch (error) {
+    console.error("[contact] Failed to send email:", error);
+    return NextResponse.json(
+      {
+        success: false,
+        message:
+          "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per WhatsApp.",
+      },
+      { status: 502 }
     );
   }
 
