@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { eventTypeOptions } from "@/lib/constants";
@@ -140,6 +141,27 @@ export default function ContactForm() {
           />
         </Field>
       </div>
+
+      <label className="flex items-start gap-3 text-sm text-muted">
+        <input
+          type="checkbox"
+          name="datenschutzZustimmung"
+          required
+          className="mt-1 h-4 w-4 shrink-0 rounded border-black/20 text-gold accent-gold focus:ring-gold/30"
+        />
+        <span>
+          Ich habe die{" "}
+          <Link
+            href="/datenschutz"
+            target="_blank"
+            className="text-gold underline underline-offset-2 hover:text-gold-dark"
+          >
+            Datenschutzerklärung
+          </Link>{" "}
+          gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung
+          meiner Anfrage einverstanden. <span className="text-gold">*</span>
+        </span>
+      </label>
 
       <AnimatePresence>
         {state === "error" && (

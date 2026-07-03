@@ -33,10 +33,7 @@ export default function EventsGrid() {
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-transparent" />
-            <span className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-xl shadow-md backdrop-blur-sm">
-              {event.emoji}
-            </span>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
           </div>
           <div className="p-7">
             <h3 className="font-heading text-xl text-foreground">

@@ -42,6 +42,17 @@ export async function POST(request: Request) {
     );
   }
 
+  if (!data.datenschutzZustimmung) {
+    return NextResponse.json(
+      {
+        success: false,
+        message:
+          "Bitte stimmen Sie der Datenschutzerklärung zu, um fortzufahren.",
+      },
+      { status: 400 }
+    );
+  }
+
   try {
     await sendContactEmail({
       vorname: String(data.vorname),

@@ -39,6 +39,10 @@ function formatSubmission(data: ContactSubmission) {
     ["Gewünschtes Datum", data.datum || "–"],
     ["Anzahl der Gäste", data.gaesteanzahl || "–"],
     ["Nachricht", data.nachricht || "–"],
+    [
+      "Datenschutz-Zustimmung",
+      `Ja, am ${new Date().toLocaleString("de-DE", { timeZone: "Europe/Berlin" })}`,
+    ],
   ];
 
   const text = rows.map(([label, value]) => `${label}: ${value}`).join("\n");

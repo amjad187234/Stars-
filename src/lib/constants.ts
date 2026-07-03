@@ -16,6 +16,7 @@ export const contactInfo = {
   cityLine: "13158 Berlin",
   phone: "+49 177 9744839",
   phoneHref: "+491779744839",
+  email: "info@starseventsaal.de",
 };
 
 export const impressumInfo = {
@@ -35,7 +36,6 @@ export const navLinks = [
 
 export type EventCategory = {
   slug: string;
-  emoji: string;
   title: string;
   description: string;
   image: string;
@@ -44,7 +44,6 @@ export type EventCategory = {
 export const eventCategories: EventCategory[] = [
   {
     slug: "hochzeiten-verlobungen",
-    emoji: "💍",
     title: "Hochzeiten & Verlobungen",
     description:
       "Der perfekte Ort für den schönsten Tag Ihres Lebens. Feiern Sie Ihre Hochzeit oder Verlobung in einer eleganten Atmosphäre und schaffen Sie Erinnerungen, die für immer bleiben.",
@@ -52,7 +51,6 @@ export const eventCategories: EventCategory[] = [
   },
   {
     slug: "geburtstage-familienfeiern",
-    emoji: "🎉",
     title: "Geburtstage & Familienfeiern",
     description:
       "Gemeinsam besondere Momente erleben. Ob Geburtstag, Jubiläum oder Familienfest – unsere stilvolle Location bietet den idealen Rahmen für unvergessliche Feiern.",
@@ -60,7 +58,6 @@ export const eventCategories: EventCategory[] = [
   },
   {
     slug: "firmenfeiern-business-meetings",
-    emoji: "🏢",
     title: "Firmenfeiern & Business Meetings",
     description:
       "Professionell tagen und stilvoll feiern. Von Business Meetings bis zu Firmenfeiern – wir bieten die passende Umgebung für erfolgreiche Veranstaltungen.",
@@ -68,7 +65,6 @@ export const eventCategories: EventCategory[] = [
   },
   {
     slug: "konferenzen-seminare",
-    emoji: "🎤",
     title: "Konferenzen & Seminare",
     description:
       "Moderne Räumlichkeiten für erfolgreiche Events. Unsere großzügigen Säle eignen sich ideal für Konferenzen, Seminare, Workshops und Präsentationen.",
@@ -76,7 +72,6 @@ export const eventCategories: EventCategory[] = [
   },
   {
     slug: "messen-kulturelle-veranstaltungen",
-    emoji: "🎭",
     title: "Messen & Kulturelle Veranstaltungen",
     description:
       "Viel Platz für große Ideen. Ob Messe, Ausstellung oder kulturelle Veranstaltung – unsere Location bietet den perfekten Rahmen für Events jeder Größe.",
