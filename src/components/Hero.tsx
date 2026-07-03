@@ -19,7 +19,7 @@ export default function Hero() {
     <section
       id="startseite"
       ref={ref}
-      className="relative flex h-[100svh] min-h-[640px] w-full items-end overflow-hidden"
+      className="relative flex h-[100svh] min-h-[640px] w-full items-center overflow-hidden sm:items-end"
     >
       {/* Mobile: light decorative gradient instead of the desktop photo */}
       <div
@@ -64,7 +64,7 @@ export default function Hero() {
       <div className="absolute inset-0 hidden bg-gradient-to-b from-black/60 via-transparent to-transparent sm:block" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent sm:from-black/75 sm:via-black/10" />
 
-      <div className="relative z-10 w-full px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
+      <div className="relative z-10 w-full px-6 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
         <div className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 24 }}
