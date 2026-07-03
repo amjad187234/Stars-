@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star } from "lucide-react";
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -21,7 +21,32 @@ export default function Hero() {
       ref={ref}
       className="relative flex h-[100svh] min-h-[640px] w-full items-end overflow-hidden"
     >
-      <motion.div style={{ y }} className="absolute inset-0 -top-[15%] h-[130%] w-full">
+      {/* Mobile: light decorative gradient instead of the desktop photo */}
+      <div
+        className="absolute inset-0 overflow-hidden sm:hidden"
+        style={{
+          background:
+            "radial-gradient(circle at 15% 15%, rgba(201,162,39,0.35), transparent 45%), radial-gradient(circle at 85% 75%, rgba(201,162,39,0.25), transparent 50%), linear-gradient(160deg, #16130c 0%, #0b0a08 55%, #14110a 100%)",
+        }}
+      >
+        <Star
+          className="absolute -right-16 -top-16 text-gold/10"
+          size={280}
+          strokeWidth={0.75}
+          fill="currentColor"
+        />
+        <Star
+          className="absolute -bottom-24 -left-20 text-gold/10"
+          size={320}
+          strokeWidth={0.75}
+          fill="currentColor"
+        />
+      </div>
+
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 -top-[15%] hidden h-[130%] w-full sm:block"
+      >
         <Image
           src="/images/hero.jpg"
           alt="Eleganter Innenraum des Stars Event Saal in Berlin"
@@ -34,10 +59,10 @@ export default function Hero() {
 
       <motion.div
         style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-black"
+        className="absolute inset-0 hidden bg-black sm:block"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+      <div className="absolute inset-0 hidden bg-gradient-to-b from-black/60 via-transparent to-transparent sm:block" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent sm:from-black/75 sm:via-black/10" />
 
       <div className="relative z-10 w-full px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
         <div className="max-w-2xl">
