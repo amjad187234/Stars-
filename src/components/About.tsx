@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Reveal from "./Reveal";
-import { fadeLeft, fadeRight } from "@/lib/motion";
 
 export default function About() {
   return (
     <section id="ueber-uns" className="overflow-x-clip bg-white py-24 sm:py-32">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
-        <Reveal variants={fadeLeft}>
+      <div className="mx-auto max-w-3xl px-6 text-center lg:px-0">
+        <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-gold">
             Unsere Location
           </p>
@@ -58,25 +56,6 @@ export default function About() {
               </p>
             </div>
           </dl>
-        </Reveal>
-
-        <Reveal variants={fadeRight} className="relative">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-[0_30px_60px_-20px_rgba(0,0,0,0.25)]">
-            <Image
-              src="/images/about.jpg"
-              alt="Stilvoll eingerichteter Saal des Stars Event Saal"
-              fill
-              sizes="(min-width: 1024px) 45vw, 90vw"
-              className="object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white px-8 py-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.25)] sm:block">
-            <p className="font-heading text-3xl text-gold">100%</p>
-            <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-              Zufriedene Kunden
-            </p>
-          </div>
         </Reveal>
       </div>
     </section>

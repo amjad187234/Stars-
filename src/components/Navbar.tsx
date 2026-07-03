@@ -44,7 +44,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <a href="#startseite" className="block">
+        <a href="#startseite" className="logo-shine block">
           <Image
             src="/images/logo.png"
             alt="Stars Event Saal Logo"

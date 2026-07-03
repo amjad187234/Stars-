@@ -14,13 +14,15 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Image
-              src="/images/logo.png"
-              alt="Stars Event Saal Logo"
-              width={592}
-              height={379}
-              className="h-16 w-auto"
-            />
+            <span className="logo-shine">
+              <Image
+                src="/images/logo.png"
+                alt="Stars Event Saal Logo"
+                width={592}
+                height={379}
+                className="h-16 w-auto"
+              />
+            </span>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Ihre stilvolle Eventlocation in Berlin für Hochzeiten,
               Verlobungen, Familienfeiern und Firmenevents.
