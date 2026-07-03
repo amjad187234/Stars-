@@ -6,7 +6,7 @@ import { contactInfo, whatsappHref } from "@/lib/constants";
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="bg-white py-24 sm:py-32">
+    <section id="kontakt" className="overflow-x-clip bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-gold">

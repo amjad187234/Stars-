@@ -4,7 +4,7 @@ import { fadeLeft, fadeRight } from "@/lib/motion";
 
 export default function About() {
   return (
-    <section id="ueber-uns" className="bg-white py-24 sm:py-32">
+    <section id="ueber-uns" className="overflow-x-clip bg-white py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <Reveal variants={fadeLeft}>
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-gold">
