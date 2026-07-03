@@ -19,6 +19,22 @@ export default function Navbar() {
 
   const dark = scrolled || menuOpen;
 
+  // Tapping an anchor inside the collapsing mobile menu updates the hash but
+  // the browser swallows the scroll, so close the menu first and scroll
+  // programmatically once its exit animation has finished.
+  function handleMobileNav(event: React.MouseEvent<HTMLAnchorElement>) {
+    const href = event.currentTarget.getAttribute("href");
+    if (!href?.startsWith("#")) return;
+    event.preventDefault();
+    setMenuOpen(false);
+    window.history.replaceState(null, "", href);
+    window.setTimeout(() => {
+      document
+        .querySelector(href)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 400);
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -86,7 +102,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={handleMobileNav}
                     className="block py-3 text-base font-medium text-foreground"
                   >
                     {link.label}
@@ -96,7 +112,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <a
                   href="#kontakt"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={handleMobileNav}
                   className="block rounded-full bg-gold px-6 py-3 text-center text-sm font-medium text-white"
                 >
                   Jetzt anfragen
