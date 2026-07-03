@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { contactInfo } from "./constants";
 
 export type ContactSubmission = {
   vorname: string;
@@ -69,7 +70,7 @@ export async function sendContactEmail(data: ContactSubmission) {
 
   const transporter = buildTransport();
   const { text, html } = formatSubmission(data);
-  const to = process.env.CONTACT_TO_EMAIL || process.env.SMTP_USER;
+  const to = process.env.CONTACT_TO_EMAIL || contactInfo.email;
 
   await transporter.sendMail({
     from: `"Stars Event Saal Website" <${process.env.SMTP_USER}>`,

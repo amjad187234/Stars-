@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Reveal from "./Reveal";
 import ContactForm from "./ContactForm";
 import { fadeLeft, fadeRight } from "@/lib/motion";
@@ -62,6 +62,23 @@ export default function ContactSection() {
                       className="mt-1 block text-sm text-muted transition-colors hover:text-gold"
                     >
                       {contactInfo.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold/10 text-gold">
+                    <Mail size={20} strokeWidth={1.5} />
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">
+                      E-Mail
+                    </p>
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className="mt-1 block break-all text-sm text-muted transition-colors hover:text-gold"
+                    >
+                      {contactInfo.email}
                     </a>
                   </div>
                 </div>

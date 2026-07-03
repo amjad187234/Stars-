@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUp, MapPin, Phone } from "lucide-react";
+import { ArrowUp, MapPin, Phone, Mail } from "lucide-react";
 import { navLinks, contactInfo, siteConfig } from "@/lib/constants";
 
 export default function Footer() {
@@ -67,6 +67,15 @@ export default function Footer() {
                   className="transition-colors hover:text-gold-light"
                 >
                   {contactInfo.phone}
+                </a>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white/70">
+                <Mail size={18} className="mt-0.5 shrink-0 text-gold" />
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="break-all transition-colors hover:text-gold-light"
+                >
+                  {contactInfo.email}
                 </a>
               </li>
             </ul>

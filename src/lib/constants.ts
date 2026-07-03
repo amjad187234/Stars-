@@ -16,7 +16,7 @@ export const contactInfo = {
   cityLine: "13158 Berlin",
   phone: "+49 177 9744839",
   phoneHref: "+491779744839",
-  email: "info@starseventsaal.de",
+  email: "Alaa.doghmoush@web.de",
 };
 
 export const impressumInfo = {
