@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Stars Event Saal",
   tagline: "Wo Ihre schönsten Momente strahlen",
-  url: "https://starseventsaal.de",
+  url: "https://stars-event-saal.de",
   description:
     "Stars Event Saal ist Ihre stilvolle Eventlocation in Berlin für Hochzeiten, Verlobungen, Familienfeiern und Firmenevents. Elegantes Ambiente, moderne Ausstattung, Platz für bis zu 500 Gäste.",
 };
