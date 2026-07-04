@@ -3,6 +3,7 @@ import { Playfair_Display, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { siteConfig, contactInfo } from "@/lib/constants";
+import CookieBanner from "@/components/CookieBanner";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -98,6 +99,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

@@ -75,7 +75,9 @@ export default function DatenschutzPage() {
         <p>
           Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es
           werden ausschließlich technisch notwendige Daten verarbeitet, die
-          für den Betrieb der Website erforderlich sind.
+          für den Betrieb der Website erforderlich sind. Ihre Auswahl im
+          Cookie-Hinweis wird lokal in Ihrem Browser gespeichert (Local
+          Storage), damit der Hinweis nicht bei jedem Besuch erneut erscheint.
         </p>
       </section>
 
